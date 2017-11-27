@@ -1,28 +1,30 @@
 <template>
   <div id="app">
     <nav-bar @navigate="navigate"/>
+    <div class="wizard-container">
       <div class="wizard">
-      <stepper
-        :steps="steps"
-        :stepp="step"
-      />
-      <name-loop
-        v-show="step == 0"
-      />
-      <select-videos
-        v-show="step == 1"
-      />
-      <add-slide
-        v-show="step == 2"
-      />
-      <custom-video
-        v-show="step == 3"
-      />
-      <review
-        v-show="step == 4"
-      />
-      <!-- <repeaters :repeaters="repeaters"/>
-      <playlist :repeaters="repeaters"/> -->
+        <stepper
+          :steps="steps"
+          :stepp="step"
+        />
+        <name-loop
+          v-show="step == 0"
+        />
+        <select-videos
+          v-show="step == 1"
+        />
+        <add-slide
+          v-show="step == 2"
+        />
+        <custom-video
+          v-show="step == 3"
+        />
+        <review
+          v-show="step == 4"
+        />
+        <!-- <repeaters :repeaters="repeaters"/>
+        <playlist :repeaters="repeaters"/> -->
+      </div>
     </div>
   </div>
 </template>
@@ -146,20 +148,28 @@ export default {
   }
   #app {
     padding: 0;
+    margin: 0;
     width: 100%;
   }
-  .wizard {
-    margin: 0 275px;
+  .wizard-container {
     padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .wizard {
+    width: 1080px;
+    padding: 0;
+    margin: 0;
   }
   @media only screen and (max-width: 900px) {
     .wizard {
-      margin: 0;
+      width: 100%;
     }
   }
   @media only screen and (max-width: 500px) {
     .wizard {
-      margin: 0;
+      width: 100%;
     }
   }
 </style>

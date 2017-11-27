@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="add-slide">
     <h1>Make an Image or Text Slide</h1>
     <h4>Use a slide to promote your services, introduce your physicians, make an announement, and more.</h4>
     <div>
@@ -7,14 +7,19 @@
       <button>Make a Slide</button>
       <button>No Thanks</button>
     </div>
+    <slide-options />
   </div>
 </template>
 
 <script>
+import SlideOptions from './SlideOptions'
 export default {
   name: 'add-slide',
   props: [
   ],
+  components: {
+    SlideOptions
+  },
   data () {
     return {
     }
@@ -23,6 +28,10 @@ export default {
 </script>
 
 <style scoped>
+  .add-slide {
+    margin: 0;
+    padding: 0;
+  }
   div {
     text-align: center;
   }

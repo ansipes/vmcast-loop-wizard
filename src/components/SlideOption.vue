@@ -34,6 +34,7 @@ export default {
   padding: 0px;
   overflow: hidden;
   margin: 0 10px;
+  margin-bottom: 20px;
 }
 
 .slide-option h4, p {

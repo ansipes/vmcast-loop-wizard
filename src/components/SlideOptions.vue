@@ -3,6 +3,7 @@
     <slide-option/>
     <slide-option/>
     <slide-option/>
+    <div class="spacer"></div>
   </div>
 </template>
 
@@ -26,6 +27,12 @@ export default {
 }
 </script>
 <style>
+
+.spacer {
+  display: none;
+  padding: 0 5px;
+}
+
 .slide-options {
   width: 100%;
   display: -webkit-box;
@@ -41,4 +48,15 @@ export default {
   margin: 0;
   padding: 0;
 }
+
+@media only screen and (max-width: 500px) {
+
+  .spacer {
+    display: block;
+    padding: 0 5px;
+  }
+
+}
+
+
 </style>

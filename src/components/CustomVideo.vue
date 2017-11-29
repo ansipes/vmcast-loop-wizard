@@ -7,14 +7,20 @@
       <button>Add a Video</button>
       <button>No Thanks</button>
     </div>
+    <add-custom-video />
   </div>
 </template>
 
 <script>
+import AddCustomVideo from './AddCustomVideo'
+
 export default {
   name: 'custom-video',
   props: [
   ],
+  components: {
+    AddCustomVideo
+  },
   data () {
     return {
     }
